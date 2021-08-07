@@ -1,0 +1,52 @@
+.skills {
+  margin-bottom: $gap-lg;
+  padding: $gap-sm;
+
+  @media (max-width: 576px) {
+    margin-bottom: 0;
+    padding: $gap;
+  }
+
+  &__container {
+    display: grid;
+
+    margin-bottom: $gap;
+
+    grid-auto-rows: calc(33.33vh - 13.333333px);
+    @include lg-min {
+      gap: $gap-sm;
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md {
+      gap: $gap-sm;
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md-sm {
+      gap: $gap-sm;
+      grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      gap: $gap;
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-height: 691px) {
+      grid-auto-rows: calc(33.33vh - 13.333333px);
+    }
+
+    @media (max-height: 690px) {
+      grid-auto-rows: calc(230px - 13.333333px);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+}
