@@ -16,11 +16,13 @@
 
   &__title {
     z-index: 1;
+
     height: 100%;
     margin: 0;
-    letter-spacing: 0.1em;
-    @include abs-position;
 
+    letter-spacing: 0.1em;
+
+    @include abs-position;
     @include md-min {
       font-size: 1.25rem;
     }

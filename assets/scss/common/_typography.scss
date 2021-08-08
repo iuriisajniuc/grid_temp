@@ -60,15 +60,15 @@ a {
     @include lg-min {
       min-width: 250px;
       height: $gap-x3;
+
       font-size: 1.125rem;
     }
-
     @include lg-md {
       min-width: 200px;
       height: 50px;
+
       font-size: 1rem;
     }
-
     @include md {
       min-width: 170px;
       height: $gap-x2;
@@ -86,7 +86,6 @@ a {
     @include sm-min {
       min-width: 350px;
     }
-
     @include sm {
       width: 100%;
     }

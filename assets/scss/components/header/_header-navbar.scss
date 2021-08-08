@@ -1,40 +1,48 @@
 .header-navbar {
   &__btn {
+    position: relative;
+
     width: 30px;
     height: 22.5px;
-    position: relative;
     margin: 25px 0 25px auto;
-    transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
+
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
 
     @include md-min {
       display: none;
     }
 
     &-row {
-      display: block;
       position: absolute;
-      height: 3px;
+
+      display: block;
+
       width: 50%;
-      background: $color-light;
-      opacity: 1;
-      transform: rotate(0deg);
+      height: 3px;
+
       transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+
+      opacity: 1;
+      background: $color-light;
 
       &:nth-child(even) {
         left: 50%;
+
         border-radius: 0 3px 3px 0;
       }
 
       &:nth-child(odd) {
-        left: 0px;
+        left: 0;
+
         border-radius: 3px 0 0 3px;
       }
 
       &:nth-child(1),
       &:nth-child(2) {
-        top: 0px;
+        top: 0;
       }
 
       &:nth-child(3),
@@ -60,54 +68,60 @@
       }
 
       &:nth-child(1) {
-        left: 2.5px;
         top: 3.5px;
+        left: 2.5px;
       }
 
       &:nth-child(2) {
-        left: calc(50% - 2.5px);
         top: 3.5px;
+        left: calc(50% - 2.5px);
       }
 
       &:nth-child(3) {
         left: -50%;
+
         opacity: 0;
       }
 
       &:nth-child(4) {
         left: 100%;
+
         opacity: 0;
       }
 
       &:nth-child(5) {
-        left: 2.5px;
         top: 14.5px;
+        left: 2.5px;
       }
 
       &:nth-child(6) {
-        left: calc(50% - 2.5px);
         top: 14.5px;
+        left: calc(50% - 2.5px);
       }
     }
   }
 
   &__list {
     @include md-min {
-      gap: $gap;
-      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       display: grid;
       justify-content: end;
+
+      gap: $gap;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       @include unlist(0 (-$gap-sm) 0 0);
     }
-
     @include md {
-      display: none;
-      @include unlist(0, 10px 0);
       position: absolute;
-      right: $gap;
       top: 100%;
-      background-color: rgba($color-gray-dark, 0.95);
+      right: $gap;
+
+      display: none;
+
       text-align: right;
+
+      background-color: rgba($color-gray-dark, 0.95);
+
+      @include unlist(0, 10px 0);
       @include box-shadow;
     }
     &--active {
@@ -118,17 +132,16 @@
   &__link {
     display: block;
 
-    @include md-min {
-      padding: $gap ($gap / 2);
-    }
-
-    @include md {
-      padding: $gap ($gap * 2);
-    }
-
     transition: color 0.5s;
 
     font-size: 1.125rem;
+
+    @include md-min {
+      padding: $gap ($gap / 2);
+    }
+    @include md {
+      padding: $gap ($gap * 2);
+    }
 
     &:hover,
     &:focus {
