@@ -756,7 +756,7 @@ p {
   top: 0;
   width: 2px;
   height: 200px;
-  background-color: #637588;
+  background-color: rgba(99, 117, 136, 0.1);
   content: "";
 }
 .about__content p:last-of-type {
