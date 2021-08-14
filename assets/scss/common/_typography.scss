@@ -5,8 +5,6 @@
 }
 
 html {
-  overflow-y: scroll;
-
   letter-spacing: 0.1em;
 
   color: $color-gray;
@@ -34,65 +32,40 @@ h1 {
   }
 }
 
+h2 {
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  font-family: $font-header;
+  color: $color-primary;
+  @include lg-min {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  @include lg-md {
+    margin-bottom: 2.625rem;
+    font-size: 2rem;
+  }
+  @include md-sm {
+    margin-bottom: 2.25rem;
+    font-size: 1.5rem;
+  }
+  @include sm {
+    text-align: center;
+    margin-bottom: 2.25rem;
+    font-size: 1.5rem;
+  }
+}
+h3 {
+  letter-spacing: 0.05em;
+  color: #637588;
+  font-size: 1.125rem;
+}
 a {
   text-decoration: none;
 
   color: $color-light;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding-right: 1em;
-  padding-left: 1em;
-
-  transition: background-color 0.5s;
-  letter-spacing: 0.1em;
-
-  border: 2px solid $color-light;
-
-  &--light {
-    border: 2px solid $color-light;
-    background-color: rgba(255, 255, 255, 0.1);
-
-    @include lg-min {
-      min-width: 250px;
-      height: $gap-x3;
-
-      font-size: 1.125rem;
-    }
-    @include lg-md {
-      min-width: 200px;
-      height: 50px;
-
-      font-size: 1rem;
-    }
-    @include md {
-      min-width: 170px;
-      height: $gap-x2;
-    }
-  }
-
-  &--primary {
-    height: $gap-x3;
-
-    border: 2px solid $color-primary;
-    background-color: rgba($color-primary, 0.8);
-
-    font-size: 1.125rem;
-
-    @include sm-min {
-      min-width: 350px;
-    }
-    @include sm {
-      width: 100%;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $color-accent;
-  }
+p {
+  color: $color-gray;
 }

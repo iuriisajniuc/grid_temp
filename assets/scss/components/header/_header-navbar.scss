@@ -1,10 +1,16 @@
 .header-navbar {
+  display: grid;
+  align-items: center;
+  letter-spacing: 0.1em;
+  right: 0;
+  justify-items: end;
+
   &__btn {
     position: relative;
 
     width: 30px;
-    height: 22.5px;
-    margin: 25px 0 25px auto;
+    height: 23px;
+    margin: 20px 0;
 
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -103,8 +109,8 @@
 
   &__list {
     @include md-min {
-      display: grid;
-      justify-content: end;
+      display: flex;
+      justify-content: flex-end;
 
       gap: $gap;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
@@ -129,6 +135,12 @@
     }
   }
 
+  &__item {
+    @include md {
+      margin: 0 20px;
+    }
+  }
+
   &__link {
     display: block;
 
@@ -137,10 +149,10 @@
     font-size: 1.125rem;
 
     @include md-min {
-      padding: $gap ($gap / 2);
+      padding: $gap ($gap-sm);
     }
     @include md {
-      padding: $gap ($gap * 2);
+      padding: $gap ($gap-sm);
     }
 
     &:hover,

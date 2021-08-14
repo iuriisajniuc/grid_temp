@@ -1,0 +1,63 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-right: 1em;
+  padding-left: 1em;
+
+  transition: background-color 0.5s;
+  letter-spacing: 0.1em;
+
+  border: 2px solid $color-light;
+
+  &--light {
+    border: 2px solid $color-light;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    @include lg-min {
+      min-width: 250px;
+      height: $gap-x3;
+
+      font-size: 1.125rem;
+    }
+    @include lg-md {
+      min-width: 200px;
+      height: 50px;
+      font-size: 1rem;
+    }
+
+    @include md-sm {
+      min-width: 170px;
+      letter-spacing: 0.05em;
+      height: $gap-x2;
+    }
+
+    @include sm {
+      min-width: 170px;
+      letter-spacing: 0.05em;
+      height: $gap-x2;
+    }
+  }
+
+  &--primary {
+    height: $gap-x3;
+
+    border: 2px solid $color-primary;
+    background-color: rgba($color-primary, 0.8);
+
+    font-size: 1.125rem;
+
+    // @include sm-min {
+    //   min-width: 350px;
+    // }
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
